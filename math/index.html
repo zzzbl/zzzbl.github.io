@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<!--<html lang="ru">-->
+<html>
+
+<head>
+    <link type="text/css" rel="stylesheet" href="./math_files/css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type='text/javascript' src='./math_files/js/scripts.js'></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+    <title>TEST task</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+    <ul class="nav nav-tabs">
+        <li id="check"><a href="#check_tab">Проверка</a></li>
+        <li id="settings"><a href="#settings_tab">Установка</a></li>
+    </ul>
+
+    <div id="tabs_container">
+        <div id = "check_tab">
+            <table id = "right_wrong">
+                <tr>
+                    <td><p>Верных ответов: </p> </td>
+                    <td><p id="right">0</p></td>
+                </tr>
+                <tr>
+                    <td><p>Неверных ответов: </p></td>
+                    <td><p id="wrong">0</p></td>
+                </tr>
+            </table>
+            <table id="example">
+                <tr>
+                    <div id="equation">
+                        <td><p id="numberA"></p></td>
+                        <td><p id="operation"></p></td>
+                        <td><p id="numberB"></p></td>
+                        <td><p>=</p></td>
+                    </div>
+
+                        <td>
+                            <input type="text" name="USER_answer" size="5" name="message" value="Ответ">
+                        </td>
+                        <td>
+                            <button id="checkButton">Проверить</button>
+                        </td>
+                </tr>
+            </table>
+        </div>
+
+         <div id = "settings_tab">
+             <div id = checkbox_form>
+                 <form action="">
+                     <input type="checkbox" name="settings" value="addition">Сложение<br>
+                     <input type="checkbox" name="settings" value="subtraction">Вычитание<br>
+                     <input type="checkbox" name="settings" value="multiplication">Умножение<br>
+                     <input type="checkbox" name="settings" value="division">Деление<br>
+                 </form>
+             </div>
+
+             <button id="saveButton">Сохранить</button><br/>
+          </div>
+    </div>
+
+</body>
+
+</html>
