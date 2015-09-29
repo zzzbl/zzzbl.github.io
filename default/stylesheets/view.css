@@ -1,0 +1,100 @@
+html {
+    background-color: #a33636;
+    /*font-family: Tahoma, sans-serif;   */
+    
+}
+body {
+    background-color: #fbf5e2;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    font-size: 16px;
+    padding-top: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: #a33636;
+    margin: 0;
+    text-align: center;
+    /*padding: 20px;*/
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+* {border-radius: 5px;}
+footer {
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 0;
+    /*margin-top: 20px;*/
+    /*padding-bottom: 0;*/
+    /*padding: 100px 300px 0 200px;*/
+    width: 60%;
+    background-color: #b0d0ca;
+    color: #fff;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+
+.skills {
+    list-style-type:none;
+    align-self: left;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.skills li {
+    font-size: 14px;
+    float: left;
+    display: block;
+    border-radius: 5px;
+    padding: 5px 5px;
+    width: 120px;
+    margin: 5px;
+    text-align: center;
+}
+.skills li:first-child, .moreskills li:nth-child(4), .skills li:nth-child(7), .skills li:nth-child(4) {
+    background-color: #b0d0ca;
+}
+.skills li:nth-child(2), .skills li:nth-child(5), .skills li:nth-child(8), .moreskills li:nth-child(5)  {
+    background-color: #9cb2ba;
+}
+.skills li:nth-child(3), .skills li:nth-child(6), .moreskills li:nth-child(6) {
+    background-color: #555363;
+}
+
+
+
+
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+a:hover, a:active {
+    color: #a33636;
+
+}
+
+#fraze {
+   padding-top: 20px;
+}
+
+#bio {
+   font-family: cursive;
+   margin-left: -10px;
+}
+
+img {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
