@@ -1,0 +1,87 @@
+html {
+    /*background: #000;*/
+    background-image: url("/JS_cookbook_files/img/5x4dg3.gif");
+    
+}
+* {
+   font-family: 'Architects Daughter', cursive;
+}
+body {
+    /*position: center;*/
+    width: 35%;
+    background: #983B59;
+    margin: auto;
+}
+
+h1 {
+    color: #e0abff;
+    margin: auto;
+    text-align: center;
+    font-weight: 800;
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+h3 {
+    color: #ffe097;    
+    margin-bottom: 10px;
+    padding: 10px;
+    text-align: center;
+}
+h2 {
+    color: #983B59;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0;
+    text-align: center;
+    font-size: 2em;
+}
+h4 {    
+    color: #ffe097;
+    margin: 0;
+}
+.creation-date {
+    color: #000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.box {
+     background: #ffe097;
+    border-radius: 5px;
+    width: 35%;
+    height: auto;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+button {
+    /*background: #f9d4f5;*/   
+    border-radius: 5px;
+}
+a, a:hover, a:visited, a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+
+footer {
+    position: absolute;
+    margin: 0;
+    width: 35%;
+    background: #FFF;
+    text-align: right;
+    padding-right: 10px;
+}
+/*Classes to be used via js file*/
+.blue {
+    background-color: blue;   
+}
+.borderincr {
+    border-bottom-width: 10px;
+}
+button:disabled {
+    color: #FFF;
+}
+/*to secure from older browsers*/
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block; 
+}
