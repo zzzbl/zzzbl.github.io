@@ -1,0 +1,48 @@
+html {
+    display: table;
+    margin: auto;
+    background-color: #ffffff;
+    font-family: Tahoma, sans-serif;    
+}
+body {
+    position: center;
+}
+
+#textfortask {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    color: gray;     
+}
+button {
+    padding: 5px;
+    border-radius: 10px;    
+}
+button:disabled {
+    background-color: #f5f5f5;
+    color: #FFF;
+    border-bottom: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+}
+button:enabled{
+    color: black;    
+}
+.win {
+    background-color: #00FF00;
+    color: #FFF;
+}
+.failure {
+    background-color: #CC0000;
+    color: #FFF;
+}
+#attemps {
+    color: #000;
+    font-size: 24px;   
+}
+h4 {
+    color: #FFF;
+    font-style: italic;
+    font-weight: 200;
+    background-color: #3316b2;
+    padding: 15px 15px;
+    border-radius: 10px;
+}
