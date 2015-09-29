@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A book of recipies">
+    <meta name="keywords" content="Recipes, book, javascript, lists, frameworks">
+    <meta name="author" content="Olena Ignatovych">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>
+    <script type='text/javascript' src='JS_cookbook_files/js/JS_cookbook_script.js'></script>
+    <!--google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src="JS_cookbook_files/js/angular.min.js"></script>
+    <!--modules-->
+    <script type='text/javascript' src="JS_cookbook_files/js/app.js"></script>    
+    <!--controllers-->
+    <script type='text/javascript' src="JS_cookbook_files/js/controllers/MainController.js"></script> 
+    <script type='text/javascript' src="JS_cookbook_files/js/controllers/TextController.js"></script> 
+    <script type='text/javascript' src="JS_cookbook_files/js/controllers/OtherController.js"></script>
+    <!--<script type='text/javascript' src="JS_cookbook_files/js/controllers/CreateController.js"></script> -->
+    <!--directives-->
+    <script type='text/javascript' src="JS_cookbook_files/js/directives/recipe.js"></script> 
+    <link href="JS_cookbook_files/css/xeditable_upd.css" rel="stylesheet"> 
+    <script src="JS_cookbook_files/js/xeditable.js"></script>
+    <link type="text/css" rel="stylesheet" href="JS_cookbook_files/css/JS_cookbook_styles.css"> 
+    <!--<script type='text/javascript' src=" http://fs101.www.ex.ua/get/738865503613/7d67c224848d2118525bc6ef24bd8201/163941290/recipes.json"></script>-->
+    <link rel="icon" href="self_web_files/img/fl.ico"/>
+    <title>A cookbook</title>
+    
+    <meta>
+</head>
+    
+<body ng-app="CookBook">
+    <main>
+        <h1>A cookbook</h1>
+        <h3>Welcome! Feel free to edit existing recipes or/and add new ones.</h3>
+        <div class="recipes" ng-controller="MainController">      
+        
+            <div class="container" ng-repeat="recipe in recipes| orderBy:'date'">
+                 <recipe info="recipe" ng-show="recipe.last"></recipe>
+            </div>
+          
+            <h3>Add your recipe here:</h3>
+            <div class="container">            
+            <h4>Name:</h4>
+            <p><textarea ng-model="recname" cols="40" rows="1"></textarea></p>
+            <p>Number of characters left: <span ng-bind="leftname()"></span></p>
+            <h4>Recipe:</h4>
+            <p><textarea ng-model="rectext" cols="40" rows="10"></textarea></p>
+            <p>Number of characters left: <span ng-bind="lefttext()"></span></p>
+            <p>
+                <button ng-click="add()" ng-disabled="rectext == ''||recname == ''">Save</button>
+                <button ng-click="clear()" ng-disabled="!(!!rectext || !!recname)">Clear</button>            
+            </p>
+            </div>
+        </div>
+        <div ng-controller="TextController" id="thediv">
+            <p id="clickcheck">{{text}}</p>
+            <button id="buttonsave" style="display:none">Save</button>
+            <button id="buttoncancel" style="display:none">Cancel</button>
+            <button id="thebutton" ng-click="savetext()">Modify</button>
+        </div>
+        
+        <div ng-controller="OtherController" id="newdiv">
+            <p><textarea ng-model="caramba" ng-change="btnenab=true">default text</textarea></p>
+            <button ng-show="btnenab">Save</button>
+        </div>
+        
+    </main>
+    <footer>
+        <p>by O.Ignatovych</p>
+        <p id="jsonview"></p>
+    </footer>
+</body>
+</html>
