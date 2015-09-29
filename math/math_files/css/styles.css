@@ -1,0 +1,127 @@
+html {
+    display: table;
+    margin: auto;
+}
+body {
+    font-family: Arial, helvetica;
+    width: 400px;
+    height:300px;
+    content: inherit;
+    border: 2px solid #6495ed;
+    border-radius: 10px 10px;
+    margin:0
+}
+ul {
+    list-style: none;
+   }
+li {
+    color: #5a5a5a;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-table;
+    margin:0;
+    text-align: center;
+}
+.nav li {
+    width:50%;
+}
+#right_wrong {
+    margin-top: 20px;
+    width: 90%;
+    font-size: 20px;
+}
+#example {
+    width: 90%;
+    font-size: 20px;
+    color: #00008b;
+}
+#checkbox_form {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: inherit;
+}
+table {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+#example tr td:nth-child(6) {
+    text-align: right;
+}
+#right{
+    color:green;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    text-align: right;
+}
+#wrong{
+    color:red;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 10px;
+    text-align: right;
+}
+a {
+    text-decoration: none;
+}
+#tabs_container {
+    margin-top: 0;
+}
+button {
+    font-size: 20px;
+    background-color: #00008b;
+    color: #fff8dc;
+    text-align: center;
+    border: 2px solid #6495ed;
+    border-radius: 10px 10px;
+    padding: 5px 5px 5px 5px;
+    box-shadow: 0 8px 6px -6px black;
+float: none;
+}
+form {
+    font-size: 20px;
+    color: #00008b;
+}
+#advice {
+    color:gray;
+    font-size: 12px;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+#saveButton {
+    font-size: 20px;
+    margin-left: 20px;
+    color:white;
+}
+#checkButton {
+    font-size: 20px;
+    color:white;
+}
+.hide {
+    display:none;
+}
+.active-menu {
+    display: inline;
+    border-left: 3px solid #6496ed;
+    border-right: 3px solid #6496ed;
+    border-top: 3px solid #6496ed;
+    border-radius: 10px 10px 0 0;
+}
+.inactive-menu {
+    border-bottom: 3px solid #6496ed;
+    border-radius: 10px 10px 0 0;
+}
+p {
+    color: darkblue;
+}
+td {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+td p {
+    margin-bottom: -5px;
+    margin-right: 10px;
+}
