@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+	<title>Responsive layout</title>
+    <meta name="description" content="Responsive layout">
+    <meta name="keywords" content="Fluid block, two sizes version, pushmenu">
+    <meta name="author" content="Olena Ignatovych">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!--<script type='text/javascript' src='responsive_files/js/jquery-1.9.1.min.js'></script>-->
+    <script type='text/javascript' src='responsive_files/js/jquery.dotdotdot.js'></script>
+    <script type='text/javascript' src='responsive_files/js/jquery.dotdotdot.min.js'></script>
+	<link rel="stylesheet" href="responsive_files/css/responsive_styles.css">    
+    <script type='text/javascript' src='responsive_files/js/responsive_script.js'></script>
+    <link rel="icon" href="responsive_files/img/man.ico"/>
+</head>
+<body class="all">
+    <header>
+        <button id="icon"></button>
+        <img id="logo" src = "responsive_files/img/logo_white.png" alt = "Logo big/small image" width="250" heights="50"/>
+        <nav role="navigation">
+            <ul id="fullmenu">
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+                <li><a href="#">Menu3</a></li>
+            </ul>
+        </nav>
+        <button id="helpbutton">Help button</button>        
+    </header>
+    <nav class="pushmenu">
+        <a href="#">Menu 1</a>
+        <a href="#">Menu 2</a>
+        <a href="#">Menu 3</a>
+    </nav>
+        
+    <div class="columns">
+        <div class="wrapmiddle">  	  
+	        <div class="middle">
+	            <p>Block 2</p>
+                <article>
+                    <img src="responsive_files/img/face_image.png" alt = "some image from the article" width="150" heights="100"/>
+                    <div class="crop">this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph this is a very long paragraph</div>
+                </article>
+                <article>
+                    <img src="responsive_files/img/face_image.png" alt = "some image from the article" width="150px" heights="100px"/>
+                    <p>...</p>
+                </article>
+                <article>
+                    <img src="responsive_files/img/face_image.png" alt = "some image from the article" width="150px" heights="100px"/>
+                    <p>...</p>
+                </article>
+                <article>
+                    <img src="responsive_files/img/face_image.png" alt = "some image from the article" width="150px" heights="100px"/>
+                    <p>...</p>
+                </article>
+	        </div>
+	    </div>
+        
+	    <div class="left">
+            <p>Block 1</p>
+	    </div>	  
+
+	    <div class="right">
+	        <p>Block 3</p>
+	    </div> 
+    </div>
+    <div id="mobile-indicator"></div>
+
+</body>
+</html>
+
+

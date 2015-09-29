@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-width: 350px;
+    width: 100%;
+    background-color: #fff;
+    font-family: sans-serif;  
+}
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #808080;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 10px;
+    display: block;
+}
+.gray {
+    background-color: #494949!important;
+}
+button#icon {
+    float: left;
+    background-color: #808080;
+    background: url(../img/three_nav_icon.png) no-repeat center;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+#helpbutton {
+    float: right;
+    padding: 15px;
+    height: 50px;    
+    background-color: #808080;
+}
+ul {
+    display: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+img#logo {
+    float: left;
+    width: 50px; 
+    height: auto;
+    position: absolute;
+    margin-top: 20px;
+}
+div.crop {
+    width: 100%-150px;
+}
+.crop {
+    margin-top: 10px;
+    color: #000; 
+    display: block;
+    width:50%;
+    overflow:hidden;
+    height:75px;
+    line-height:25px; 
+}
+.middle{
+    background-color: #808080;
+    min-height: 500px;
+}
+.left {
+    width: 100%;
+    background-color: #808080;
+    color: #000;
+    min-height: 250px;
+    height: 50%;  
+    margin-bottom: 10px;
+}
+.right {
+    width: 100%;
+    background-color: #808080;
+    color: #000;
+    min-height: 500px;
+    height: 100%;
+}
+article {
+    background-color: #d7d7d7;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    height: 100px;  
+    cursor: pointer;
+}
+article img {
+    float: left;
+}
+article div {
+    padding-left: 10px;
+    float: left;
+}
+.pushmenu {
+    background: #494949;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    position:fixed;
+    left: -250px;
+}
+.pushmenu a {
+    display: block;
+    padding: 15px;
+}
+.pushmenu a:hover {
+    background: #ADD8E6;
+}
+.pushmenu-show {
+    left: 0;
+}
+.all {
+    overflow-x: hidden;
+    position: relative;
+    left: 0;
+}
+.all-push-right {
+    left: 250px;
+}
+article, nav {
+    display: block;
+}
+
+#mobile-indicator {
+    display: block;
+}
+
+/*-------------CSS for the screen wider than 750px---------------*/
+
+@media only screen and (min-width: 750px) {
+#mobile-indicator {
+    display: none;
+}
+.wrapmiddle{
+    float: left;
+    width: 100%;
+}
+.middle{
+    margin-right:210px;
+    margin-left:260px;
+}
+.left{
+    float: left;
+    width: 250px;
+    margin-left: -100%;
+}
+.right{
+    float: left;
+    width: 200px;
+    margin-left: -200px;
+}
+img#logo {
+    width: 250px; 
+    height: 50px;
+    position: relative;
+    margin-top: 0;
+}
+ul {
+    display: block;
+}
+li { 
+    position: relative;
+    display: block;
+    width: 50px;
+    float: left;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+li:hover {
+    background-color: #ADD8E6;
+}
+.pushmenu,#icon {
+        display: none;
+}
+    
+} /*------@media*/
+
