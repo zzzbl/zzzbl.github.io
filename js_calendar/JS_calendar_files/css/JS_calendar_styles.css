@@ -1,0 +1,72 @@
+html {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+body {
+    width: 60%;
+    margin: auto;
+}
+h1 {
+    text-align: center;
+}
+#year_month_change {
+    background-color: lightgray;
+    height: 60px;
+    text-align: center;
+    padding: 5px;
+}
+#prev {
+    position: relative;
+    float: left;
+}
+#next {
+    position: relative;
+    float: right;
+}
+.nav_button {
+    text-align: center;
+    width: 60px;
+    height: 40px;
+    background-color: #fff;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 5px;    
+    cursor: pointer;
+    margin: 5px;
+}
+main, table {
+    width: 100%;
+}
+tr {
+    width: 100%;
+}
+#month_calendar tr:first-child td{
+    border-bottom: 4px #d3d3d3 solid;
+	cursor: default;
+}
+td {
+    width: 14.2%;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+}
+#curr_year {
+    color: white;
+}
+#curr_month {
+    color: white;
+}
+/*marking an active day class*/
+.active_day {
+    background-color: lightblue;
+}
+footer {
+    position: relative;
+    color: gray;
+    bottom: 0;
+    text-align: right;
+}
+footer, main, header {
+    display: block;
+}
