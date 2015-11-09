@@ -1,0 +1,15 @@
+<div class="box">
+    <h2 class="recipe-name">{{info.name| uppercase}} </h2>
+    <h4 class="creation-date">{{info.date| date:"medium"}} </h4>
+    <div>
+         <a href="#"><p class="description" editable-text="info.description">{{info.description|| "empty"}} </p></a>
+    </div>
+    <button ng-click="editable" ng-show="false">Modify</button>
+    <button ng-click="show()">Show all modifications</button>
+    <button ng-click="removeitem(info)">Remove</button>
+</div>
+<!--Display list of recipes (date created, description)
+Add new recipe
+Modify existed recipe
+View all previous recipe versions
+<button ng-click="modify()">Modify</button>-->
