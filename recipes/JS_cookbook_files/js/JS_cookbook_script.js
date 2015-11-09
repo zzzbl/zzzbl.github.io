@@ -1,5 +1,4 @@
-var main = function() {
-    
+var main = function() {    
     
     jQuery("button#thebutton").click(function(){
         var clickcheckvar = jQuery("p#clickcheck").text();
@@ -30,17 +29,6 @@ var main = function() {
         jQuery("#thebutton").show();
         jQuery("p#clickcheck").text(clickcheckvar);
     });
-    /*jQuery.getJSON("JS_cookbook_files/js/recipessss.json", function(json) {
-        console.log(json); // this will show the info it in firebug console
-        jQuery.jsonview.val(json);
-    });*/
-
-    /*function resetlocalstorage() {
-       localStorage.clear();
-    }; 
-    jQuery("#reset").click(function() {
-        resetlocalstorage();
-    };*/
 }; 
 jQuery.noConflict();
 jQuery(document).ready(main);
