@@ -18,8 +18,6 @@
     <!--controllers-->
     <script type='text/javascript' src="JS_cookbook_files/js/controllers/MainController.js"></script> 
     <script type='text/javascript' src="JS_cookbook_files/js/controllers/TextController.js"></script> 
-    <!--<script type='text/javascript' src="JS_cookbook_files/js/controllers/OtherController.js"></script>-->
-    <!--<script type='text/javascript' src="JS_cookbook_files/js/controllers/CreateController.js"></script> -->
     <!--directives-->
     <script type='text/javascript' src="JS_cookbook_files/js/directives/recipe.js"></script> 
     <link href="JS_cookbook_files/css/xeditable_upd.css" rel="stylesheet"> 
@@ -56,18 +54,7 @@
             </p>
             </div>
         </div>
-        <div ng-controller="TextController" id="thediv">
-            <p id="clickcheck">{{text}}</p>
-            <button id="buttonsave" style="display:none">Save</button>
-            <button id="buttoncancel" style="display:none">Cancel</button>
-            <button id="thebutton" ng-click="savetext()">Modify</button>
-        </div>
         
-        <!--<div ng-controller="OtherController" id="newdiv">
-            <p><textarea ng-model="caramba" ng-change="btnenab=true">default text</textarea></p>-->
-            <button ng-show="btnenab">Save</button>
-            <!--<button id = "reset" onclick="resetlocalstorage()">Reset Default</button> <!--doesn't work-->
-        </div>
         
     </main>
     <footer>
