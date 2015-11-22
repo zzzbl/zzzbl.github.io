@@ -1,48 +1,14 @@
-app.controller("MainController",  ['$scope', function($scope) {
-     /* ['$scope', '$http', function($scope,$http) {$http.get('http://fs101.www.ex.ua/get/738865503613/7d67c224848d2118525bc6ef24bd8201/163941290/recipes.json').success(function(data){
-$http.get('/js/recipes.json').success(function(data){
-        $scope.recipes=data;
-        ////http://www.ignatovych.com/json/recipessss.json
-        XMLHttpRequest cannot load http://www.ignatovych.com/json/recipessss.json. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://127.0.0.1:49642' is therefore not allowed access///
-        
-    });*/
-    $scope.recipes = [
-        {
-        name: "Pizza",
-        date: "1283323623006",
-        description: "Bake 15min, then serve. Blablablabla",
-        version: 0,
-        last: false
-        },
-        {
-        name: "Pizza",
-        date: "1288323623006",
-        description: "Bake 10min, then serve. Blablablabla",
-        version: 1,
-        last: true
-        },
-        {
-        name: "Quiche",
-        date: "1188323623008",
-        description: "Bake 25min, then serve. Blablablabla. Blablablabla",
-        version: 0,
-        last: true
-        },
-        {
-        name: "Cake",
-        date: "1429008364350",
-        description: "Bake bluberries 25min, then serve. Blablablabla. Blablablabla",
-        version: 0,
-        last: true
-        }  
-     ];
-    
-    /*;
-    $scope.show= function() {
-        if (!unique) {
-            $scope.recipe.hide();
-        }
-    }*/
+app.controller("MainController", ['$scope', '$http', function($scope, $http) {
+	if (localStorage.getItem("recipearr") === null ||localStorage.getItem("recipearr")==[]) {  
+		$http.get('JS_cookbook_files/js/recipess.json').success(function(data){ 
+			$scope.recipes=data;
+    	}).
+		error(function(data) {
+			console.log("http get doesn't work");
+    	});} else {
+      		$scope.recipes = JSON.parse(localStorage.getItem('recipearr'));
+     	}
+
     $scope.rectext = "";
     $scope.recname = "";
     $scope.leftname  = function() {return 20 - $scope.recname.length;};
@@ -51,21 +17,62 @@ $http.get('/js/recipes.json').success(function(data){
         $scope.rectext = "";
         $scope.recname = "";
     };
-   /* $scope.save  = function() {
-        alert("Recipe Saved");
-    
-    }; */   
+
     $scope.add = function() {
         $scope.recipes.push({name:$scope.recname, date:new Date(), description:$scope.rectext,version: 0, last: true});
         alert("Recipe Saved");
         $scope.rectext = "";
         $scope.recname = "";
+        localStorage.setItem('recipearr', JSON.stringify($scope.recipes));
+        var recipearr = JSON.parse(localStorage.getItem('recipearr'));
     };
-    $scope.modify = function() {
-        $scope.recname = $scope.recipe.name;
-        $scope.rectext = $scope.recipe.description;
-    };
-    if (window.localStorage) { // Only do this if the browser supports it
-        localStorage.recipes = $scope.recipes;
-    }
+	
+    $scope.removeitem = function(smth) {
+		var array_of_use = $scope.recipes;
+		var idx  = smth;
+		array_of_use.splice(idx,1);
+		
+        localStorage.setItem('recipearr', JSON.stringify(array_of_use));
+        $scope.recipes = JSON.parse(localStorage.getItem('recipearr'));
+	};
+	
+	var edit_show_var = false;
+	
+	$scope.edititem = function(idx) {
+		edit_show_var = true;
+	    var edit_recipe = angular.copy($scope.recipes[idx]); // as the "=" provides a link to an object, which causes a circle error.
+		$scope.recname = edit_recipe.name;
+		$scope.rectext = edit_recipe.description;
+		
+		$scope.save_edit = function() {
+			if(edit_recipe.name!==$scope.recname || edit_recipe.description!==$scope.rectext) {
+				
+				if($scope.recipes[idx].oldver == undefined || $scope.recipes[idx].oldver == "") {
+					$scope.recipes[idx].oldver = [];
+				}
+				$scope.recipes[idx].oldver.unshift(edit_recipe); //add to the 1st place. so older versions
+				$scope.recipes[idx].name = $scope.recname;
+				$scope.recipes[idx].description = $scope.rectext;
+				$scope.recipes[idx].date = Date();
+				$scope.clear();
+				
+				localStorage.setItem('recipearr', JSON.stringify($scope.recipes));
+				$scope.recipes = JSON.parse(localStorage.getItem('recipearr'));				
+				
+			} else { $scope.clear();}
+			
+			edit_show_var = false;	
+			}
+	}
+	
+	$scope.oldrecipes=[];
+	
+	$scope.viewmodif = function(idx) {
+		$scope.oldrecipes[idx] = $scope.recipes[idx].oldver;
+	}
+	
+	$scope.edit_show  = function() {return edit_show_var;};
+	
 }]);
+/*by O.Ignatovych*/
+

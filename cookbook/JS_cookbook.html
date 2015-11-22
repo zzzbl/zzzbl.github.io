@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="A book of recipies with angularjs">
+    <meta name="keywords" content="Recipes, book, javascript, angularjs, lists, frameworks">
+    <meta name="author" content="Olena Ignatovych">
+    <!--google fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <script type='text/javascript' src="JS_cookbook_files/js/angular.min.js"></script>
+    <!--modules-->
+    <script type='text/javascript' src="JS_cookbook_files/js/app.js"></script>    
+    <!--controllers-->
+    <script type='text/javascript' src="JS_cookbook_files/js/controllers/MainController.js"></script> 
+    <!--directives-->
+    <script type='text/javascript' src="JS_cookbook_files/js/directives/recipe.js"></script> 
+    <link type="text/css" rel="stylesheet" href="JS_cookbook_files/css/JS_cookbook_styles.css"> 
+    <link rel="icon" href="JS_cookbook_files/img/fl.ico"/>
+    <title>Cookbook</title>
+    
+    <meta>
+</head>
+    
+<body ng-app="CookBook">
+    <main>
+        <h1>Cookbook</h1>
+        <h3>Welcome! This application is using AngularJS framework. Feel free to edit or delete existing recipes and add the new ones.</h3>
+        <div class="recipes" ng-controller="MainController">      
+        
+            <div class="container" ng-repeat="recipe in recipes track by $index"><!--order by date doesn't work with track - actually is not true. as track by should be always the last expession!!!
+https://docs.angularjs.org/api/ng/directive/ngRepeat-->
+                <recipe info="recipe"></recipe>
+				<a href="#editwin"><button class="button-group" ng-click="edititem($index)">Edit</button></a>
+    			<button class="button-group" ng-click="removeitem($index)">Remove</button>
+				<button class="button-group" id = "show" ng-show="!$show_var" ng-click="$show_var = true; viewmodif($index);">Show all modifications</button>
+				<button class="button-group" id = "hide" ng-show="$show_var" ng-click="$show_var = false;">Hide modifications</button>
+				<div ng-show="$show_var">
+					<div class="box old_ver" class="container" ng-repeat="oldrecipe in oldrecipes[$index]">
+						<h2>{{oldrecipe.name | uppercase}}</h2>
+						<h4 class="creation-date">{{oldrecipe.date | date:"medium"}} </h4>
+						<p>{{oldrecipe.description}}</p>
+					</div>
+					
+				</div>
+				<div class="message" ng-show="$show_var && !oldrecipes[$index]"><p>No older versions</p></div>
+				
+            </div>
+            <div  id="editwin">
+            <h3>Add or edit your recipe here:</h3>
+            <div class="container">            
+            <h4>Name:</h4>
+            <p><textarea ng-model="recname" cols="40" rows="1"></textarea></p>
+            <p>Number of characters left: <span ng-bind="leftname()"></span></p>
+            <h4>Recipe:</h4>
+            <p><textarea ng-model="rectext" cols="40" rows="10"></textarea></p>
+            <p>Number of characters left: <span ng-bind="lefttext()"></span></p>
+            
+			<button ng-click="save_edit()" ng-show="edit_show()">Save changes</button> 
+            <button ng-click="add()" ng-hide="edit_show()" ng-disabled="rectext == ''||recname == '' ||leftname()<0 ||lefttext()<0 ">Save</button>
+            <button ng-click="clear()" ng-hide="edit_show()" ng-disabled="!(!!rectext || !!recname)">Clear</button>            
+            </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>by O.Ignatovych</p>
+        <p id="jsonview"></p>
+    </footer>
+</body>
+</html>

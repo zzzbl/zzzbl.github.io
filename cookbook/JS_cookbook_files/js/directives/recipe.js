@@ -7,3 +7,4 @@ app.directive("recipe", function() {
     templateUrl: "JS_cookbook_files/js/directives/recipe.html"
   };
 });
+/*by O.Ignatovych*/
