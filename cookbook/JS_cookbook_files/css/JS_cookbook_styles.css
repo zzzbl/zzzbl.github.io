@@ -1,18 +1,16 @@
 html {
-    /*background: #000;*/
-    background-image: url("../img/5x4dg3.gif");
-    
+    background-image: url("../img/5x4dg3.gif");    
 }
 * {
-   font-family: 'Architects Daughter', cursive;
+    font-family: 'Architects Daughter', cursive;
+	font-weight: 100;
 }
 body {
-    /*position: center;*/
     width: 35%;
     background: #983B59;
     margin: auto;
+	font-size: 14px;
 }
-
 h1 {
     color: #e0abff;
     margin: auto;
@@ -22,15 +20,17 @@ h1 {
     margin-bottom: 10px;
 }
 h3 {
+	font-size: 1.5em;
+	line-height: 1.1;
     color: #ffe097;    
-    margin-bottom: 10px;
-    padding: 10px;
+	text-indent: 10px;
+    padding: 0 1em;
     text-align: center;
 }
 h2 {
     color: #983B59;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 0;
     margin-top: 0;
     text-align: center;
     font-size: 2em;
@@ -40,48 +40,72 @@ h4 {
     margin: 0;
 }
 .creation-date {
-    color: #000;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    color: #983B59;
+	margin-bottom: 0;
+}
+p {
+   margin-top: 0;
 }
 .box {
-     background: #ffe097;
+    background: #ffe097;
     border-radius: 5px;
-    width: 35%;
+    width: 90%;
+	margin: auto;
     height: auto;
     padding: 5px;
-    margin-bottom: 10px;
+}
+.button-group {
+	position: relative;
+    margin-top: -1em;
+	margin-bottom: 1em;
+}
+.button-group:first-child {
+	margin-left: 5%;
+}
+.old_ver {
+    background: lightgray;
+	margin-bottom: 1em;
+}
+.old_ver *{
+	color: black;
 }
 button {
-    /*background: #f9d4f5;*/   
     border-radius: 5px;
 }
-a, a:hover, a:visited, a:active {
-    text-decoration: none;
-    color: #000;
+textarea {
+    width: 70%;	
 }
-
-
+#editwin {
+    margin-left: 5%;
+	padding-bottom: 1em;
+}
+.message {
+    margin-left: 5%;
+}
 footer {
     position: absolute;
     margin: 0;
     width: 35%;
     background: #FFF;
     text-align: right;
-    padding-right: 10px;
 }
-/*Classes to be used via js file*/
-.blue {
-    background-color: blue;   
-}
-.borderincr {
-    border-bottom-width: 10px;
+footer p {
+	margin-right: 5%;
 }
 button:disabled {
     color: #FFF;
 }
 /*to secure from older browsers*/
-
 header, section, footer, aside, nav, main, article, figure {
     display: block; 
 }
+@media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+    }
+	footer {
+	    width: 100%;
+	}
+}
+
+/*by O.Ignatovych*/
