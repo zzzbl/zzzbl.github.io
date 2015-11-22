@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="address book">
+    <meta name="keywords" content="Name, Email, Telephone, Address">
+    <meta name="author" content="Olena Ignatovych">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.0.0.js"></script>-->
+	<link rel="stylesheet" href="address_book_files/css/bootstrap.min.css">
+	<script src="address_book_files/js/jquery-1.9.1.min.js"></script>
+    <script src="address_book_files/js/jquery-migrate-1.0.0.js"></script>
+    <script type='text/javascript' src='address_book_files/js/address_book_script.js'></script>	
+    <link type="text/css" rel="stylesheet" href="address_book_files/css/address_book_styles.css"> 
+    <link rel="icon" href="address_book_files/img/fl.ico"/>
+    <title>Address book</title>	
+	
+</head>
+<body>
+
+    <div class="container">
+        <h1>Address book</h1>
+        <h2>Welcome! This is an app, that uses JQuery. Add some new people in the book, edit or delete existing ones.</h2>
+			<div class="row">
+				<div class="col-md-6">
+					<div id="input">
+						<h3>Name:</h3>
+							<p><textarea id="name" cols="40" rows="1">Name</textarea></p>
+						<h3>Email:</h3>
+							<p><textarea id="email" cols="40" rows="1">Email</textarea></p>
+						<h3>Telephone:</h3>
+							<p><textarea id="telephone" cols="40" rows="1">Telephone</textarea></p>
+						<h3>Address:</h3>
+							<h4>Street</h4>
+								 <p><textarea id="street" cols="40" rows="1">Street</textarea></p>
+							<h4>City</h4>
+								 <p><textarea id="city" cols="40" rows="1">City</textarea></p>
+							<h4>State</h4>
+								 <p><textarea id="state" cols="40" rows="1">State</textarea></p>
+							<h4>Zip</h4>
+								 <p><textarea id="zip" cols="40" rows="1">Zip</textarea></p>					
+
+						<button onclick="add()" id="add">Add</button>
+						<button onclick="clear()" id="clear">Clear</button>
+						<button id="save">Save changes</button>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<h3>Customers: </h3>
+					<div id="customers"></div>
+				</div>				
+			</div>
+        
+        
+    </div>
+    <footer>
+        <p>by O.Ignatovych</p>		
+    </footer>
+</body>
+</html>

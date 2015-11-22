@@ -1,0 +1,67 @@
+html {
+    background: #FFF;   
+}
+body {
+	font-family: sans-serif;
+    width: 80%;
+    background: #8b1a1a;
+    margin: auto;
+}
+.container {
+	width: 100%;
+}
+h1 {
+    color: #FFF;
+    margin: auto;
+    text-align: center;
+    font-weight: 800;
+    font-size: 5em;
+	margin-bottom: 10px;
+}
+h2 {
+	color: #FFF;
+	font-size: 2em;
+	font-style: italic;
+    margin: auto!important;
+}
+h3 {
+    color: #FFF;
+	font-style: italic;
+	margin-left: 5px;
+    text-align: left;
+}
+h4 {    
+    color: #b5cbc5;
+    margin: 0;
+}
+#customers {
+	background-color: #b5cbc5;
+    width: 80%;
+	padding: 5px;
+}
+textarea {
+	width: 80%;
+}
+button { 
+    border-radius: 5px;
+}
+a, a:hover {
+    text-decoration: none;
+	color:inherit;
+}
+footer {
+    position: absolute;
+    margin: 0;
+    background: #FFF;
+    text-align: right;
+    padding-right: 10px;
+}
+button:disabled {
+    color: #FFF;
+}
+@media screen and (max-width: 640px) {
+    body {
+        width: 100%;
+    }
+}
+/*by O.Ignatovych*/
