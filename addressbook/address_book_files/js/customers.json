@@ -1,0 +1,35 @@
+[
+        {
+        "name": "Bob Marley",
+        "email": "bob.marley@google.com",
+        "telephone": "096-555-55-55",
+        "address": {
+		    "street": "Kreschatyk 11",
+			"city": "Kyiv",
+			"state": "Ukraine",
+			"zip": "01000"
+			}
+        },
+        {
+        "name": "Merilyn Monroe",
+        "email": "merilyn.monroe@google.com",
+        "telephone": "096-111-11-11",
+        "address": {
+		    "street": "Vasylkivska 18",
+			"city": "Kyiv",
+			"state": "Ukraine",
+			"zip": "03000"
+			}
+        },
+        {
+        "name": "Mickey Mouse",
+        "email": "mickey.mouse@disney.com",
+        "telephone": "001-111-11-11",
+        "address": {
+		    "street": "pastastreet 1",
+			"city": "Disney",
+			"state": "Wonderland",
+			"zip": "00001"
+			}
+        }  
+]
