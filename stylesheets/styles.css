@@ -1,11 +1,10 @@
 html {
-    background-color: #a33636;
-    /*font-family: Tahoma, sans-serif;   */
-    
+    background-color: #a33636;    
 }
 body {
     background-color: #fbf5e2;
     width: 60%;
+    max-width: 740px;
     height: auto;
     margin: 0 auto;
     line-height: 1.5;
@@ -18,19 +17,21 @@ h1 {
     color: #a33636;
     margin: 0;
     text-align: center;
-    /*padding: 20px;*/
     padding-top: 5px;
     padding-bottom: 20px;
     font-weight: bold;
+}
+h4 {
+}
+h4.skills-plus-header {
+    margin-top: 20px;
+    color: #555363;
 }
 * {border-radius: 5px;}
 footer {
     position: absolute;
     margin-top: 15px;
     margin-bottom: 0;
-    /*margin-top: 20px;*/
-    /*padding-bottom: 0;*/
-    /*padding: 100px 300px 0 200px;*/
     width: 60%;
     background-color: #b0d0ca;
     color: #fff;
@@ -39,6 +40,7 @@ footer {
     padding-top: 5px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    max-width: 740px;
 }
 .skills {
     list-style-type:none;
@@ -47,6 +49,13 @@ footer {
     color: white;
     margin: 0;
     padding: 0;
+}
+.skills::after,
+.moreskills::after,
+.skills-plus::after{
+    content: '';
+    clear: both;
+    display: block;
 }
 .skills li {
     font-size: 14px;
@@ -58,14 +67,29 @@ footer {
     margin: 5px;
     text-align: center;
 }
-.skills li:first-child, .moreskills li:nth-child(4), .skills li:nth-child(7), .skills li:nth-child(4) {
+.skills li:nth-child(3n+1), 
+.moreskills li:nth-child(3n+1) {
     background-color: #b0d0ca;
 }
-.skills li:nth-child(2), .skills li:nth-child(5), .skills li:nth-child(8), .moreskills li:nth-child(5)  {
+.skills li:nth-child(3n+2),  
+.moreskills li:nth-child(3n+2)  {
     background-color: #9cb2ba;
 }
-.skills li:nth-child(3), .skills li:nth-child(6), .moreskills li:nth-child(6) {
+.skills li:nth-child(3n+3), 
+.moreskills li:nth-child(3n+3) {
     background-color: #555363;
+}
+.skills-plus {
+    list-style: none;
+}
+.skills-plus li {
+    float: left;
+    text-transform: uppercase;
+    padding-right: 5px;    
+    color: #555363;
+}
+.skills-plus li:not(:last-child)::after {
+    content: ' |'
 }
 a:link, a:visited {
     color: #000;
