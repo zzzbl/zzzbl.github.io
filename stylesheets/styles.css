@@ -13,7 +13,6 @@ body {
     font-size: 16px;
     padding-top: 20px;
 }
-
 h1 {
     text-transform: uppercase;
     color: #a33636;
@@ -41,8 +40,6 @@ footer {
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
-
-
 .skills {
     list-style-type:none;
     align-self: left;
@@ -51,7 +48,6 @@ footer {
     margin: 0;
     padding: 0;
 }
-
 .skills li {
     font-size: 14px;
     float: left;
@@ -71,10 +67,6 @@ footer {
 .skills li:nth-child(3), .skills li:nth-child(6), .moreskills li:nth-child(6) {
     background-color: #555363;
 }
-
-
-
-
 a:link, a:visited {
     color: #000;
     text-decoration: none;
@@ -82,19 +74,40 @@ a:link, a:visited {
 }
 a:hover, a:active {
     color: #a33636;
-
 }
-
 #fraze {
    padding-top: 20px;
 }
-
 #bio {
    font-family: cursive;
    margin-left: -10px;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
 }
-
-img {
-    margin-left: 5px;
-    margin-bottom: 20px;
+img.portrait {
+    display:block;
+    margin-bottom: 30px;
+    height: auto;
+    max-width: 200px;
+    margin-left:auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 680px) {
+    body,
+    footer {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    body, 
+    footer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 380px) {
+    body, 
+    footer {
+        width: 100%;
+    }
 }
