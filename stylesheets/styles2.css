@@ -1,11 +1,10 @@
 html {
-    /* background-color: #a33636; */
+    height: 100%;
+    width: 100%;
 }
 body {
     background-color: #f3f3f3;
-    /*    width: 60%;*/
-    /*    max-width: 740px;*/
-    height: auto;
+    height: 100%;
     margin: 0 auto;
     line-height: 1.5;
     padding-bottom: 20px;
@@ -21,12 +20,14 @@ h1 {
     padding-bottom: 20px;
     font-weight: bold;
 }
-h4 {text-align: center;margin: 24px 0;}
+h4 {
+    text-align: center;
+    margin: 24px 0;
+}
 h4.skills-plus-header {
     margin-top: 20px;
     color: #555363;
 }
-/** {border-radius: 5px;}*/
 section {
     margin-top: 300px;
     padding-bottom: 20px;
@@ -46,13 +47,11 @@ footer {
     padding-top: 5px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    /* max-width: 740px; */
 }
 div.header__poly {
     position: absolute;
     top: 0;
     height: 800px;
-    width: 100%;
     background-color: #555363;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);
     clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);
@@ -72,13 +71,9 @@ div.header__poly::after {
 div.header__portrait {
     background-image: url(../images/portrait1.jpg);
     display:block;
-    /* margin-bottom: 59px; */
     height: auto;
     width: 150px;
-    /* margin-left:auto; */
-    /* margin-right: auto; */
     height: 150px;
-    /* z-index: 3; */
     position: absolute;
     top: 110px;
     left: 40%;
@@ -104,7 +99,6 @@ div.header__portrait {
     font-size: 12px;
     float: left;
     display: block;
-    /* border-radius: 5px; */
     padding: 5px 5px;
     width: 100px;
     height: 100px;
@@ -148,28 +142,10 @@ a:hover, a:active {
    padding-top: 20px;
 }
 #bio {
-   font-family: cursive;
+/*   font-family: cursive;*/
    margin-left: -10px;
     width:90%;
     margin-left:auto;
     margin-right: auto;
 }
-/*
-@media screen and (max-width: 680px) {
-    body,
-    footer {
-        width: 80%;
-    }
-}
-@media screen and (max-width: 480px) {
-    body, 
-    footer {
-        width: 90%;
-    }
-}
-@media screen and (max-width: 380px) {
-    body, 
-    footer {
-        width: 100%;
-    }
-}*/
+
