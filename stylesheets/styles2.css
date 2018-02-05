@@ -1,0 +1,175 @@
+html {
+    /* background-color: #a33636; */
+}
+body {
+    background-color: #f3f3f3;
+    /*    width: 60%;*/
+    /*    max-width: 740px;*/
+    height: auto;
+    margin: 0 auto;
+    line-height: 1.5;
+    padding-bottom: 20px;
+    font-size: 16px;
+    padding-top: 20px;
+}
+h1 {
+    text-transform: uppercase;
+    color: #a33636;
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+h4 {text-align: center;margin: 24px 0;}
+h4.skills-plus-header {
+    margin-top: 20px;
+    color: #555363;
+}
+/** {border-radius: 5px;}*/
+section {
+    margin-top: 300px;
+    padding-bottom: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: #b0d0ca;
+    color: #fff;
+    text-align: right;
+    padding-right: 30px;
+    padding-top: 5px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    /* max-width: 740px; */
+}
+div.header__poly {
+    position: absolute;
+    top: 0;
+    height: 800px;
+    width: 100%;
+    background-color: #555363;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);
+    clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);
+    z-index: 0;
+}
+div.header__poly::after {
+    content: "OIOIOIOIOIOIOIOIOIOI";
+    display: block;
+    font-family: 'Allerta Stencil', 'Stardos Stencil', sans-serif;
+    color: #fff;
+    font-size: 120px;
+    letter-spacing: 12px;
+    margin-left: -25px;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+}
+div.header__portrait {
+    background-image: url(../images/portrait1.jpg);
+    display:block;
+    /* margin-bottom: 59px; */
+    height: auto;
+    width: 150px;
+    /* margin-left:auto; */
+    /* margin-right: auto; */
+    height: 150px;
+    /* z-index: 3; */
+    position: absolute;
+    top: 110px;
+    left: 40%;
+    background-size: 150px;
+}
+.skills {
+    list-style-type:none;
+    align-self: left;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 600px;
+}
+.skills::after,
+.moreskills::after,
+.skills-plus::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.skills li {
+    font-size: 12px;
+    float: left;
+    display: block;
+    /* border-radius: 5px; */
+    padding: 5px 5px;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 10px;
+    text-align: center;
+}
+.skills li:nth-child(3n+1), 
+.moreskills li:nth-child(3n+1) {
+    background-color: #b0d0ca;
+}
+.skills li:nth-child(3n+2),  
+.moreskills li:nth-child(3n+2)  {
+    background-color: #9cb2ba;
+}
+.skills li:nth-child(3n+3), 
+.moreskills li:nth-child(3n+3) {
+    background-color: #555363;
+}
+.skills-plus {
+    list-style: none;
+}
+.skills-plus li {
+    float: left;
+    text-transform: uppercase;
+    padding-right: 5px;    
+    color: #555363;
+}
+.skills-plus li:not(:last-child)::after {
+    content: ' |'
+}
+a:link, a:visited {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+a:hover, a:active {
+    color: #a33636;
+}
+#fraze {
+   padding-top: 20px;
+}
+#bio {
+   font-family: cursive;
+   margin-left: -10px;
+    width:90%;
+    margin-left:auto;
+    margin-right: auto;
+}
+/*
+@media screen and (max-width: 680px) {
+    body,
+    footer {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    body, 
+    footer {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 380px) {
+    body, 
+    footer {
+        width: 100%;
+    }
+}*/
