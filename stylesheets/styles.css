@@ -3,7 +3,7 @@ html {
 }
 body {
     background-color: #fbf5e2;
-    width: 60%;
+/*    width: 60%;*/
     max-width: 740px;
     height: auto;
     margin: 0 auto;
@@ -32,7 +32,7 @@ footer {
     position: absolute;
     margin-top: 15px;
     margin-bottom: 0;
-    width: 60%;
+    width: 100%;
     background-color: #b0d0ca;
     color: #fff;
     text-align: right;
