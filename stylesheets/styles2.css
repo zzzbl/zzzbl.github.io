@@ -1,9 +1,9 @@
 body {
-    background-color: #f3f3f3;
+    background-color: #85b0bf;
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
-    margin: 0;    
+    margin: 0;
 }
 p, ul li {
     font-size: 120%;
@@ -11,8 +11,17 @@ p, ul li {
 div.content-wrapper {
     display: block;
     position: relative;
-    overflow-x: hidden; 
-    overflow-y: auto; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: auto;
+    background-color: #f3f3f3;
+    max-width: 900px;
+    margin: 0 auto;
+    /* overflow-y: auto; */
+}
+div.content-wrapper::after {
+    content: '',
+    clear: both;
 }
 h1 {
     text-transform: uppercase;
@@ -27,25 +36,28 @@ h4 {
     font-size: 140%;
     font-weight: normal;
     text-align: center;
-    margin: 24px 0;
+    margin: 34px 0 20px 0;
+    color: #555363;
 }
 h4.skills-plus-header {
     margin-top: 20px;
     color: #555363;
 }
 section {
-    margin-top: 200px;
+    margin-top: 170px;
     padding-bottom: 20px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 }
 footer {
-    position: absolute;
+    position: relative;
+    height: 60px;
+    bottom:0;
     margin-top: 15px;
     margin-bottom: 0;
     width: 100%;
-    background-color: #b0d0ca;
+    background-color: #555363;
     color: #fff;
     text-align: right;
     padding-right: 30px;
@@ -118,11 +130,11 @@ div.header__portrait {
 }
 .skills li:nth-child(3n+1), 
 .moreskills li:nth-child(3n+1) {
-    background-color: #b0d0ca;
+    background-color: #e07047;
 }
 .skills li:nth-child(3n+2),  
 .moreskills li:nth-child(3n+2)  {
-    background-color: #9cb2ba;
+    background-color: #85b0bf;
 }
 .skills li:nth-child(3n+3), 
 .moreskills li:nth-child(3n+3) {
@@ -148,14 +160,19 @@ a:link, a:visited {
 a:hover, a:active {
     color: #a33636;
 }
+/*
 #fraze {
    padding-top: 20px;
 }
+*/
 #bio {
-/*   font-family: cursive;*/
-   margin-left: -10px;
+    margin-left: -10px;
     width:90%;
     margin-left:auto;
     margin-right: auto;
+    text-indent: 20px;
 }
 
+.contacts {
+    padding-left: 20px;
+}
