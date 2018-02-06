@@ -212,4 +212,18 @@ ul#code-list li::before {
             height: 180px;
             line-height: 180px;
         }
+        div.header__poly {
+            top: -160px;
+        }
+        div.header__portrait {
+            width: 200px;
+            height: 200px;
+            background-size: 200px;
+        }
+        footer {
+            height: 100px;
+        }
+        footer p {
+            font-size: 140%;
+        }
 }
