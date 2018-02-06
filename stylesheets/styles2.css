@@ -203,6 +203,7 @@ ul#code-list li::before {
 @media only screen and (min-device-width : 768px) 
     and (max-device-width : 1024px) {
         h4 {
+            margin: 70px 0 40px 0;
             font-size: 160%;
         }
         .skills li {
