@@ -1,15 +1,17 @@
-html {
-    height: 100%;
-    width: 100%;
-}
 body {
+    display: block;
+    width: auto;
     background-color: #f3f3f3;
-    height: 100%;
+/*    width: 100vw;*/
+/*    height: 100%;*/
     margin: 0 auto;
     line-height: 1.5;
     padding-bottom: 20px;
     font-size: 16px;
     padding-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    overflow:auto; 
+    position:relative;
 }
 h1 {
     text-transform: uppercase;
@@ -51,9 +53,10 @@ footer {
 div.header__poly {
     position: absolute;
     display: block;
-    top: -80px;
+    overflow-x:hidden; 
+    top: -100px;
     left: -140px;
-    height: 250px;
+    height: 300px;
     width: 120%;
     background-color: #555363;
 /*    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);*/
@@ -76,12 +79,11 @@ div.header__poly::after {
 div.header__portrait {
     background-image: url(../images/portrait1.jpg);
     display:block;
-    height: auto;
+    position: relative;
     width: 150px;
     height: 150px;
-    position: absolute;
+    margin: 0 auto;
     top: 110px;
-    left: 40%;
     background-size: 150px;
 }
 .skills {
