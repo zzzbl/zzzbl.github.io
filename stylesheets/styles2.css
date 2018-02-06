@@ -1,23 +1,15 @@
-html {
-    overflow-x: hidden; 
-    overflow-y: auto; 
+body {
+    background-color: #f3f3f3;
+    line-height: 1.5;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
     
 }
-body {
+div.content-wrapper {
     display: block;
-/*    width: auto;*/
-    background-color: #f3f3f3;
-    width: 100vw;
-/*    height: 100%;*/
-/*    margin: 0 auto;*/
-    line-height: 1.5;
-/*    padding-bottom: 20px;*/
-    font-size: 16px;
-/*    padding-top: 20px;*/
-    font-family: 'Roboto', sans-serif;
+    position: relative;
     overflow-x: hidden; 
     overflow-y: auto; 
-/*    position:relative;*/
 }
 h1 {
     text-transform: uppercase;
