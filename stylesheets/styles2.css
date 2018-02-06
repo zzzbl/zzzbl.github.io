@@ -1,17 +1,23 @@
+html {
+    overflow-x: hidden; 
+    overflow-y: auto; 
+    
+}
 body {
     display: block;
-    width: auto;
+/*    width: auto;*/
     background-color: #f3f3f3;
-/*    width: 100vw;*/
+    width: 100vw;
 /*    height: 100%;*/
-    margin: 0 auto;
+/*    margin: 0 auto;*/
     line-height: 1.5;
-    padding-bottom: 20px;
+/*    padding-bottom: 20px;*/
     font-size: 16px;
-    padding-top: 20px;
+/*    padding-top: 20px;*/
     font-family: 'Roboto', sans-serif;
-    overflow:auto; 
-    position:relative;
+    overflow-x: hidden; 
+    overflow-y: auto; 
+/*    position:relative;*/
 }
 h1 {
     text-transform: uppercase;
@@ -47,21 +53,19 @@ footer {
     text-align: right;
     padding-right: 30px;
     padding-top: 5px;
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
 }
+
 div.header__poly {
     position: absolute;
     display: block;
-    overflow-x:hidden; 
-    top: -100px;
-    left: -140px;
+    top: -200px;
+    left: -60px;
     height: 300px;
-    width: 120%;
+    width: 145%;
     background-color: #555363;
 /*    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);*/
 /*    clip-path: polygon(0 0, 100% 0%, 100% 13%, 0 33%);*/
-    z-index: 0;
+/*    z-index: 0;*/
     -webkit-transform: rotate(-12deg);
     transform: rotate(-12deg);
 }
@@ -70,7 +74,6 @@ div.header__poly::after {
     display: block;
     position: absolute;
     bottom: 0;
-    vertical-align:bottom;    
     font-family: 'Allerta Stencil', 'Stardos Stencil', sans-serif;
     color: #f3f3f3;
     font-size: 120px;
