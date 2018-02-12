@@ -88,7 +88,7 @@ div.header__poly::before {
     position: absolute;
     top: 0;
     font-family: 'Allerta Stencil', 'Stardos Stencil', sans-serif;
-    color: #d3d3d3;
+    color: #ccd2d5;
     font-size: 120px;
     letter-spacing: 12px;
 }
