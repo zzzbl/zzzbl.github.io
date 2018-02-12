@@ -82,13 +82,23 @@ div.header__poly {
     -webkit-transform: rotate(-12deg);
     transform: rotate(-12deg);
 }
+div.header__poly::before {
+    content: "IOIOIOIOIOIOIOIOIOIO";    
+    display: block;
+    position: absolute;
+    top: 0;
+    font-family: 'Allerta Stencil', 'Stardos Stencil', sans-serif;
+    color: #d3d3d3;
+    font-size: 120px;
+    letter-spacing: 12px;
+}
 div.header__poly::after {
     content: "OIOIOIOIOIOIOIOIOIOI";    
     display: block;
     position: absolute;
     bottom: 0;
     font-family: 'Allerta Stencil', 'Stardos Stencil', sans-serif;
-    color: #f3f3f3;
+    color: #f7f7f7;
     font-size: 120px;
     letter-spacing: 12px;
 }
