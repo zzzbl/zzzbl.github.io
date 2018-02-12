@@ -158,7 +158,8 @@ a:link, a:visited {
     font-size: 16px;
 }
 a:hover, a:active {
-    color: #a33636;
+    color: #8cd02d;
+/*    color: #a33636;*/
 }
 #bio {
     margin-left: -10px;
